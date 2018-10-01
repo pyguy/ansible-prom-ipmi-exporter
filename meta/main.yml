@@ -1,11 +1,28 @@
 galaxy_info:
-  author: pyguy
-  description: prometheus-ipmi-exporter
-  company: your company (optional)
-  license: license (GPLv2, CC-BY, etc)
-
+  author: pyguy (hr.josheghani)
+  description: Prometheus IPMI exporter role
+  license: GPLv2
+  role_name: prometheus_ipmi_exporter
   min_ansible_version: 2.4
+  platforms:
+  - name: CentOS
+    versions:
+      - 7
+  - name: Ubuntu
+    versions:
+      - bionic
+      - xenial
+      - trusty
+      - precise
+  - name: Debian
+    versions:
+      - stretch
+      - jessie
+      - squeeze
+      - wheezy
 
-  galaxy_tags: [prometheus,ipmi]
+  galaxy_tags:
+    - prometheus
+    - freeipmi
 
-dependencies: [freeipmi,golang]
+dependencies: []
