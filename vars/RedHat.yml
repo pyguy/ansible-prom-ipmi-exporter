@@ -1,0 +1,6 @@
+---
+
+ipmi_pkgs:
+  - freeipmi
+  - git
+  - golang

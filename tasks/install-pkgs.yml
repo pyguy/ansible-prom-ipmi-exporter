@@ -1,0 +1,7 @@
+---
+
+- name: Install IPMI packages
+  package:
+    name: "{{ ipmi_pkgs }}"
+    state: present
+    update_cache: "{{ omit if ansible_pkg_mgr == 'yum' else 'yes' }}"
