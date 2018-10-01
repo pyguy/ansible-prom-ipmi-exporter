@@ -5,7 +5,7 @@ galaxy_info:
   role_name: prometheus_ipmi_exporter
   min_ansible_version: 2.4
   platforms:
-  - name: CentOS
+  - name: RHEL
     versions:
       - 7
   - name: Ubuntu

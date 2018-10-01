@@ -13,21 +13,15 @@
   when: state|default('present') == 'present'
 
 - name: Install IPMI exporter
-  shell: go get github.com/soundcloud/ipmi_exporter > /var/log/ipmi_exporter.log
+  shell: go get github.com/soundcloud/ipmi_exporter > /var/log/ipmi_exporter.log 2>&1
   environment:
-    GOPATH: /opt/go
+    GOPATH: "{{ GO_PATH }}"
+
+- name: Copy ipmi.yml config file
+  template: src=ipmi.yml.j2 dest="{{ ipmi_config_path }}/ipmi.yml"
 
 - name: Add ipmi-exporter.service
-  systemdunit:
-    name: "ipmi-exporter.service"
-    state: present
-    content: |
-      [Unit]
-      Description=Prometheus IPMI exporter
-      [Service]
-      ExecStart=/opt/go/bin/ipmi_exporter
-      [Install]
-      WantedBy=basic.target
+  template: src=ipmi-exporter.j2 dest=/etc/systemd/system/ipmi-exporter.service
 
 - name: Enable ipmi-exporter service
   systemd: name="ipmi-exporter.service" state=started enabled=yes

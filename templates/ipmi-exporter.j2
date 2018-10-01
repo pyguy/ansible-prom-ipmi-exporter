@@ -1,0 +1,6 @@
+[Unit]
+Description=Prometheus IPMI exporter
+[Service]
+ExecStart={{ GO_PATH }}/bin/ipmi_exporter -config.file {{ ipmi_config_path }}/ipmi.yml
+[Install]
+WantedBy=basic.target

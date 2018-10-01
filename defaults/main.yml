@@ -1,2 +1,5 @@
 ---
-# defaults file for prometheus-ipmi-exporter
+
+GO_PATH: /opt/go
+
+ipmi_config_path: /opt/go/bin
