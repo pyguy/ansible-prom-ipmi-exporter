@@ -1,4 +1,5 @@
 [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-pyguy.prometheus__ipmi__exporter-blue.svg)](https://galaxy.ansible.com/pyguy/prometheus_ipmi_exporter)
+
 Prometheus IPMI exporter
 ========================
 
