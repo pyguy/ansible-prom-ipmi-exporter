@@ -1,6 +1,6 @@
 [Unit]
 Description=Prometheus IPMI exporter
 [Service]
-ExecStart={{ GO_PATH }}/bin/ipmi_exporter -config.file {{ ipmi_config_path }}/ipmi.yml
+ExecStart={{ GO_PATH }}/bin/ipmi_exporter -config.file {{ ipmi_config_path }}/ipmi.yml -web.listen-address "{{ ipmi_listen_address }}"
 [Install]
 WantedBy=basic.target

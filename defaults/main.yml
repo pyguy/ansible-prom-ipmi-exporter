@@ -3,3 +3,5 @@
 GO_PATH: /opt/go
 
 ipmi_config_path: /opt/go/bin
+
+ipmi_listen_address: :9290
