@@ -3,7 +3,7 @@
 Prometheus IPMI exporter
 ========================
 
-This role installs ipmi exporter for Prometheus
+This role installs ipmi exporter for Prometheus using [this repo](https://github.com/soundcloud/ipmi_exporter).
 
 Requirements
 ------------
@@ -18,9 +18,11 @@ you also need to have a running golang environment.
 Role Variables
 --------------
 
-`GO_PATH` var is for the golang environment to work which default is `/opt/go`
+* `GO_PATH` var is for the golang environment to work which default is `/opt/go`
 
-`ipmi_config_path` is the IPMI config dir which default is `/opt/go/bin`
+* `ipmi_config_path` is the IPMI config dir which default is `/opt/go/bin`
+
+* `ipmi_listen_address`  is the address/port to listen on which default is `:9290`
 
 Example Playbook
 ----------------
