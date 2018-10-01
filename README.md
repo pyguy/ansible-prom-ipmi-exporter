@@ -15,10 +15,31 @@ This role installs the following package dependencies:
 
 you also need to have a running golang environment.
 
+Tested platforms are:
+
+  * Ubuntu
+    * bionic
+    * xenial
+    * trusty
+    * precise
+
+
+  * Debian
+    * stretch
+    * jessie
+    * squeeze
+    * wheezy
+
+
+  * CentOS 7
+
 Role Variables
 --------------
 
 * `GO_PATH` var is for the golang environment to work which default is `/opt/go`
+
+* `GO_BIN` is go command binary file which default is `go`, in some distributions
+  it sould be the command absolute path.
 
 * `ipmi_config_path` is the IPMI config dir which default is `/opt/go/bin`
 
@@ -29,11 +50,12 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: localhost
+```yml
+- hosts: localhost
       roles:
          - { role: prometheus-ipmi-exporter }
-
+```
 License
 -------
 
-BSD
+GPLv2

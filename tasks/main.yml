@@ -13,7 +13,7 @@
   when: state|default('present') == 'present'
 
 - name: Install IPMI exporter
-  shell: go get github.com/soundcloud/ipmi_exporter > /var/log/ipmi_exporter.log 2>&1
+  shell: "{{ GO_BIN }} get github.com/soundcloud/ipmi_exporter > /var/log/ipmi_exporter.log 2>&1"
   environment:
     GOPATH: "{{ GO_PATH }}"
 
