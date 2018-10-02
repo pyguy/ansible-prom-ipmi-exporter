@@ -45,6 +45,8 @@ Role Variables
 
 * `ipmi_listen_address`  is the address/port to listen on which default is `:9290`
 
+*  `exclude_sensor_ids` option can be used in `ipmi.yml` file, you can find them [here in Wiki](https://github.com/pyguy/ansible-prom-ipmi-exporter/wiki/IPMI-Sensors)
+
 Example Playbook
 ----------------
 
