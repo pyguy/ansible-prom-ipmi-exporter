@@ -3,3 +3,4 @@
 ipmi_pkgs:
   - freeipmi-tools
   - git
+  - golang

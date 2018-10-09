@@ -1,0 +1,8 @@
+---
+
+GO_BIN: /usr/lib/go-1.10/bin/go
+
+ipmi_pkgs:
+  - freeipmi-tools
+  - git
+  - golang-1.10
