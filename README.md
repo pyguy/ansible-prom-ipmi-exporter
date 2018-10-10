@@ -57,6 +57,12 @@ Including an example of how to use your role (for instance, with variables passe
       roles:
          - { role: prometheus-ipmi-exporter }
 ```
+
+Sample grafana graph
+--------------------
+![ipmi-general-status-grafana](/imgs/ipmi-general-status-grafana.png)
+![ipmi-graphs-grafana](/imgs/ipmi-graphs-grafana.png)
+
 License
 -------
 
